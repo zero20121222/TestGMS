@@ -1,0 +1,56 @@
+{
+    "vip": {
+        "properties": {
+            "amount": {
+                "type": "integer"
+            },
+            "buyerId": {
+                "type": "long"
+            },
+            "count": {
+                "type": "integer"
+            },
+            "createdAt": {
+                "type": "date",
+                "format": "dateOptionalTime"
+            },
+            "id": {
+                "type": "long"
+            },
+            "level": {
+                "type": "integer"
+            },
+            "log": {
+                "type": "string",
+                "index": "no"
+            },
+            "mobile": {
+                "type": "string",
+                "index": "not_analyzed",
+                "omit_norms": true,
+                "index_options": "docs"
+            },
+            "name": {
+                "type": "string",
+                "analyzer": "ik"
+            },
+            "score": {
+                "type": "integer"
+            },
+            "sellerId": {
+                "type": "long"
+            },
+            "shopName": {
+                "type": "string",
+                "analyzer": "ik"
+            },
+            "totalSaving": {
+                "type": "integer"
+            },
+            "updatedAt": {
+                "type": "date",
+                "format": "dateOptionalTime"
+            }
+        }
+    }
+}

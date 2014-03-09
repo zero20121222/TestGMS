@@ -22,9 +22,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="TestGMS" />
+        <module name="GMS-User" />
+        <module name="GMS-User-Api" />
+        <module name="GSM-web" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="GSM-web" target="1.6" />
+    </bytecodeTargetLevel>
   </component>
 </project>
 

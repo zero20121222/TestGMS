@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="GSM-web:war">
+    <output-path>$PROJECT_DIR$/GMS-Web/target</output-path>
+    <root id="archive" name="GSM.war">
+      <element id="artifact" artifact-name="GSM-web:war exploded" />
+    </root>
+  </artifact>
+</component>

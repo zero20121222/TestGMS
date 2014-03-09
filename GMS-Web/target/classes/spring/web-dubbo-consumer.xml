@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://code.alibabatech.com/schema/dubbo
+        http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!-- 应用名称（消费者） -->
+    <dubbo:application name="ddbao-web"/>
+
+    <!-- 注册中心入口地址，用来注册自己 -->
+    <dubbo:registry address="zookeeper://localhost:2181"/>
+
+    <!-- 账户 -->
+    <dubbo:reference interface="com.aixforce.user.service.AccountService" id="accountService"/>
+    <!-- 区域地址 -->
+    <dubbo:reference interface="com.aixforce.user.service.AddressService" id="addressService"/>
+    <!-- 用户信息 -->
+    <dubbo:reference interface="com.aixforce.user.service.UserProfileService" id="userProfileService"/>
+
+    <!-- 店铺服务 -->
+    <dubbo:reference interface="com.aixforce.crm.shop.service.ShopService" id="shopService"/>
+
+    <!-- 营销活动 -->
+    <dubbo:reference interface="com.aixforce.crm.promotion.ActivityService" id="activityService"/>
+    <!-- 券对应的服务，包括定义券和使用券两部分内容 -->
+    <dubbo:reference interface="com.aixforce.crm.promotion.coupon.service.CouponService" id="couponService"/>
+    <!-- 平台活动规则 -->
+    <dubbo:reference interface="com.aixforce.crm.promotion.PltActivityRuleService" id="pltActivityRuleService"/>
+    <!-- 平台活动相关的动作，包括增删改查等 -->
+    <dubbo:reference interface="com.aixforce.crm.promotion.PltActivityService" id="pltActivityService"/>
+    <!-- 银行卡相关 -->
+    <dubbo:reference interface="com.aixforce.crm.promotion.CardService" id="cardService"/>
+    <!-- 积分（目前只有商家） -->
+    <dubbo:reference interface="com.aixforce.crm.promotion.ScoreService" id="scoreService"/>
+    <!-- 交易记录 -->
+    <dubbo:reference interface="com.aixforce.crm.promotion.TradeJournalService" id="tradeJournalService"/>
+    <!-- 商家VIP -->
+    <dubbo:reference interface="com.aixforce.crm.promotion.VipService" id="vipService"/>
+    <!-- 收单服务 -->
+    <dubbo:reference interface="com.aixforce.crm.promotion.PayService" id="payService"/>
+    <!-- 和POS交互相关的一些动作 -->
+    <dubbo:reference interface="com.aixforce.crm.promotion.PosService" id="posService"/>
+    <!-- 促销相关服务接口 -->
+    <dubbo:reference interface="com.aixforce.crm.promotion.PromotionService" id="promotionService"/>
+    <!-- 短信服务 -->
+    <dubbo:reference interface="com.aixforce.crm.msg.SmsOrderService" id="smsOrderService"/>
+    <!-- 消息服务 -->
+    <dubbo:reference interface="com.aixforce.crm.msg.MsgService" id="msgService"/>
+
+    <!-- 商品搜索 -->
+    <dubbo:reference interface="com.aixforce.item.service.ItemSearchService" id="itemSearchService"/>
+    <!-- 商品管理 -->
+    <dubbo:reference interface="com.aixforce.item.service.ItemService" id="itemService"/>
+    <!-- 商品索引 -->
+    <dubbo:reference interface="com.aixforce.item.service.ItemIndexService" id="itemIndexService"/>
+    <!-- 商品图片 -->
+    <dubbo:reference interface="com.aixforce.item.service.ImageService" id="imageService"/>
+    <!-- 默认商品 -->
+    <dubbo:reference interface="com.aixforce.item.service.DefaultItemService" id="defaultItemService"/>
+
+</beans>

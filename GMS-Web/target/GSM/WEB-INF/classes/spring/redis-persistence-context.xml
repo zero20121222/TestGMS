@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2012 杭州端点网络科技有限公司
+  -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--redis 配置-->
+    <bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">
+        <property name="maxTotal" value="20"/>
+        <property name="maxIdle" value="2"/>
+        <property name="maxWaitMillis" value="100000"/>
+        <property name="testOnBorrow" value="true"/>
+    </bean>
+
+    <bean id="jedisTemplate" class="com.aixforce.redis.utils.JedisTemplate">
+        <constructor-arg index="0" ref="jedisPool"/>
+    </bean>
+
+    <beans profile="dev,test,prepub">
+        <bean id="jedisPool" class="redis.clients.jedis.JedisPool">
+            <constructor-arg index="0" ref="jedisPoolConfig"/>
+            <constructor-arg index="1" value="102.terminus.io"/>
+            <constructor-arg index="2" value="1221" type="int"/>
+        </bean>
+    </beans>
+
+    <beans profile="prod">
+        <bean id="jedisPool" class="redis.clients.jedis.JedisSentinelPool">
+            <constructor-arg index="0" value="${redisClusterName}" />
+            <constructor-arg index="1">
+                <set>
+                    <value>${sentinelHost}:${sentinelPort}</value>
+                </set>
+            </constructor-arg>
+            <constructor-arg index="2" ref="jedisPoolConfig"/>
+        </bean>
+    </beans>
+
+
+</beans>

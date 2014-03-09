@@ -1,0 +1,103 @@
+{
+    "coupon" : {
+        "properties" : {
+            "amount" : {
+                "type" : "integer"
+            },
+            "branches" : {
+                "type" : "string",
+                "index":"no"
+            },
+            "createdAt" : {
+                "type" : "date",
+                "format" : "dateOptionalTime"
+            },
+            "dateRule" : {
+                "type" : "string",
+                "index" : "no"
+            },
+            "desc" : {
+                "type" : "string",
+                "index" : "no"
+            },
+            "endDate" : {
+                "type" : "date",
+                "format" : "dateOptionalTime"
+            },
+            "id" : {
+                "type" : "long"
+            },
+            "imageUrl" : {
+                "type" : "string",
+                "index" : "no"
+            },
+            "limitPerCustomer" : {
+                "type" : "integer"
+            },
+            "name" : {
+                "type" : "string",
+                "analyzer" : "ik"
+            },
+            "releaseQuantity" : {
+                "type" : "integer",
+                "index":"no"
+            },
+            "sellerId" : {
+                "type" : "long"
+            },
+            "shop" : {
+                "type" : "string",
+                "analyzer" : "ik"
+            },
+            "shopId" : {
+                "type" : "long"
+            },
+            "startDate" : {
+                "type" : "date",
+                "format" : "dateOptionalTime"
+            },
+            "status" : {
+                "type" : "integer"
+            },
+            "takeCount" : {
+                "type" : "integer"
+            },
+
+            "type" : {
+                "type" : "integer"
+            },
+            "updatedAt" : {
+                "type" : "date",
+                "format" : "dateOptionalTime"
+            },
+            "value" : {
+                "type" : "integer",
+                "index" : "no"
+            },
+            "businessId1" : {
+                "type" : "integer"
+            },
+            "businessId2" : {
+                "type" : "integer"
+            },
+            "cityIds" : {
+                "type" : "integer"
+            },
+            "districtIds" : {
+                "type" : "integer"
+            },
+            "execTimes" : {
+                "type" : "integer",
+                "index": "no"
+            },
+            "per":{
+                "type" :"boolean",
+                "index" : "no"
+            },
+            "actionDesc":{
+                "type" :"string",
+                "index":"no"
+            }
+        }
+    }
+}

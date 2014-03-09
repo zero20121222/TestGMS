@@ -1,0 +1,48 @@
+{
+    "ddshop" : {
+        "properties" : {
+            "branchCount" : {
+                "type" : "integer"
+            },
+            "businessId1" : {
+                "type" : "integer"
+            },
+            "businessId2" : {
+                "type" : "integer"
+            },
+            "cityIds" : {
+                "type" : "integer"
+            },
+            "districtIds" : {
+                "type" : "integer"
+            },
+            "id" : {
+                "type" : "long"
+            },
+            "sellerId":{
+                "type" : "long"
+            },
+            "imageUrl" : {
+                "type" : "string",
+                "index" : "no"
+            },
+            "name" : {
+                "type" : "string",
+                "analyzer" : "ik"
+            },
+            "defaultActivity" : {
+                "type" : "string",
+                "index" : "no"
+            },
+            "totalActivities":{
+                "type" : "integer"
+            },
+            "totalCoupons":{
+                "type" : "integer"
+            },
+            "totalVips":{
+                "type" : "integer"
+            }
+        }
+    }
+}

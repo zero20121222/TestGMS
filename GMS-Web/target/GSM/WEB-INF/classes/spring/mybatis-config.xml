@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <typeAliases>
+        <!--user related entity-->
+        <typeAlias alias="User" type="com.aixforce.user.model.User" />
+        <typeAlias alias="UserProfile" type="com.aixforce.user.model.UserProfile"/>
+        <typeAlias alias="UserExtra" type="com.aixforce.user.model.UserExtra" />
+        <typeAlias alias="Address"  type="com.aixforce.user.model.Address"/>
+        <typeAlias alias="Comment"  type="com.aixforce.user.model.Comment"/>
+
+        <!--promotion related entity-->
+        <typeAlias alias="Action" type="com.aixforce.crm.promotion.model.Action" />
+        <typeAlias alias="ActivityDefinition" type="com.aixforce.crm.promotion.model.ActivityDefinition" />
+        <typeAlias alias="CouponDefinition" type="com.aixforce.crm.promotion.model.CouponDefinition"/>
+        <typeAlias alias="Coupon" type="com.aixforce.crm.promotion.model.Coupon" />
+        <typeAlias alias="EventLog" type="com.aixforce.crm.promotion.model.EventLog" />
+
+        <!-- shop related entity -->
+        <typeAlias alias="POS" type="com.aixforce.crm.shop.model.POS" />
+        <typeAlias alias="Branch" type="com.aixforce.crm.shop.model.Branch" />
+        <typeAlias alias="BranchUser" type="com.aixforce.crm.shop.model.BranchUser" />
+        <typeAlias alias="Shop" type="com.aixforce.crm.shop.model.Shop" />
+        <typeAlias alias="ShopCategory" type="com.aixforce.crm.shop.model.ShopCategory"/>
+        <typeAlias alias="Category" type="com.aixforce.crm.shop.model.Category"/>
+
+        <!--item related entity-->
+        <typeAlias alias="Item" type="com.aixforce.item.model.Item"/>
+        <typeAlias alias="ItemDetail" type="com.aixforce.item.model.ItemDetail"/>
+        <typeAlias alias="Sku" type="com.aixforce.item.model.Sku"/>
+        <typeAlias alias="UserImage" type="com.aixforce.item.model.UserImage"/>
+        <typeAlias alias="UserQuota" type="com.aixforce.item.model.UserQuota"/>
+        <typeAlias alias="Brand" type="com.aixforce.item.model.Brand"/>
+
+        <!--vip related entity-->
+        <typeAlias alias="Card" type="com.aixforce.crm.promotion.model.Card" />
+        <typeAlias alias="Score" type="com.aixforce.crm.promotion.model.Score" />
+        <typeAlias alias="TradeJournal" type="com.aixforce.crm.promotion.model.TradeJournal" />
+        <typeAlias alias="CouponJournal" type="com.aixforce.crm.promotion.model.CouponJournal"/>
+        <typeAlias alias="Vip" type="com.aixforce.crm.promotion.model.Vip" />
+        <typeAlias alias="VipDefinition" type="com.aixforce.crm.promotion.model.VipDefinition" />
+
+        <typeAlias alias="PltActivity" type="com.aixforce.crm.promotion.model.PltActivity" />
+        <typeAlias alias="PltActivityAppliedCoupon" type="com.aixforce.crm.promotion.model.PltActivityAppliedCoupon" />
+        <typeAlias alias="PltActivityRule" type="com.aixforce.crm.promotion.model.PltActivityRule" />
+        <typeAlias alias="PltActivityStats" type="com.aixforce.crm.promotion.model.PltActivityStats" />
+
+        <!--sms related entity-->
+        <typeAlias alias="Condition" type="com.aixforce.crm.msg.model.Condition" />
+        <typeAlias alias="MsgDefinition" type="com.aixforce.crm.msg.model.MsgDefinition" />
+        <typeAlias alias="MsgSentHis" type="com.aixforce.crm.msg.model.MsgSentHis" />
+        <typeAlias alias="SmsQuota" type="com.aixforce.crm.msg.model.SmsQuota"/>
+        <typeAlias alias="SmsOrder" type="com.aixforce.crm.msg.model.SmsOrder"/>
+
+        <!-- shop related entity -->
+        <typeAlias alias="POS" type="com.aixforce.crm.shop.model.POS" />
+        <typeAlias alias="Branch" type="com.aixforce.crm.shop.model.Branch" />
+        <typeAlias alias="BranchUser" type="com.aixforce.crm.shop.model.BranchUser" />
+        <typeAlias alias="Shop" type="com.aixforce.crm.shop.model.Shop" />
+        <typeAlias alias="ShopExtra" type="com.aixforce.crm.shop.model.ShopExtra"/>
+        <typeAlias alias="ShopCategory" type="com.aixforce.crm.shop.model.ShopCategory"/>
+    </typeAliases>
+</configuration>

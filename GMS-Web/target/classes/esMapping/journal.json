@@ -1,0 +1,74 @@
+{
+    "trade": {
+        "properties": {
+            "activityId": {
+                "type": "long"
+            },
+            "amount": {
+                "type": "integer"
+            },
+            "bank": {
+                "type": "integer"
+            },
+            "branchId": {
+                "type": "long"
+            },
+            "shopName": {
+                "type": "string",
+                "analyzer": "ik"
+            },
+            "branchName": {
+                "type": "string",
+                "index": "no"
+            },
+            "buyerId": {
+                "type": "long"
+            },
+            "buyerName": {
+                "type": "string",
+                "analyzer": "ik"
+            },
+            "cardId": {
+                "type": "long",
+                "index": "no"
+            },
+            "cardNo": {
+                "type": "string",
+                "index": "no"
+            },
+            "comment": {
+                "type": "string",
+                "index": "no"
+            },
+            "createdAt": {
+                "type": "date",
+                "format": "dateOptionalTime"
+            },
+            "id": {
+                "type": "long"
+            },
+            "orderId": {
+                "type": "long",
+                "index": "no"
+            },
+            "originalAmount": {
+                "type": "integer",
+                "index": "no"
+            },
+            "sellerId": {
+                "type": "long"
+            },
+            "status": {
+                "type": "integer"
+            },
+            "log":{
+                "type":"string",
+                "index":"no"
+            },
+            "updatedAt": {
+                "type": "date",
+                "format": "dateOptionalTime"
+            }
+        }
+    }
+}

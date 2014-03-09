@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/GMS-User/GMS-User.iml" filepath="$PROJECT_DIR$/GMS-User/GMS-User.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GMS-User-Api/GMS-User-Api.iml" filepath="$PROJECT_DIR$/GMS-User-Api/GMS-User-Api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GMS-Web/GSM-web.iml" filepath="$PROJECT_DIR$/GMS-Web/GSM-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/TestGMS.iml" filepath="$PROJECT_DIR$/TestGMS.iml" />
     </modules>
   </component>
